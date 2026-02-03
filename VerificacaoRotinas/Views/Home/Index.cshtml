@@ -1,0 +1,63 @@
+﻿@{
+    ViewData["Title"] = "Rotinas DDS";
+}
+
+<div class="principal">
+    <div>
+        <h1 class="text-center mt-4">Verificação de Rotinas DDS</h1>
+    </div>
+    <div class="rotinas">
+        <div class="card-rotina total">
+            <div class="card-body">
+                <h5 class="card-title text-center">Total</h5>
+                <p class="card-text display-4">8</p>
+            </div>
+        </div>
+        <div class="card-rotina ok">
+            <div class="card-body">
+                <h5 class="card-title text-center">Ok</h5>
+                <p class="card-text display-4">4</p>
+            </div>
+        </div>
+        <div class="card-rotina alerta">
+            <div class="card-body">
+                <h5 class="card-title text-center">Alerta</h5>
+                <p class="card-text display-4">1</p>
+            </div>
+        </div>
+    </div>
+    <div class="tabela">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Rotina</th>
+                    <th>Cliente</th>
+                    <th>Status</th>
+                    <th>Última Data Hora</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01/06/2024</td>
+                    <td>João Silva</td>
+                    <td><span class="badge bg-success">Ok</span></td>
+                </tr>
+                <tr>
+                    <td>02/06/2024</td>
+                    <td>Maria Oliveira</td>
+                    <td><span class="badge bg-warning text-dark">Alerta</span></td>
+                </tr>
+                <tr>
+                    <td>03/06/2024</td>
+                    <td>Carlos Souza</td>
+                    <td><span class="badge bg-success">Ok</span></td>
+                </tr>
+                <tr>
+                    <td>04/06/2024</td>
+                    <td>Ana Pereira</td>
+                    <td><span class="badge bg-danger">Pendente</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

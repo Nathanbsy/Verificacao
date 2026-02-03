@@ -1,0 +1,25 @@
+﻿*TXT DE EXEMPLO*
+
+Descrição: Envio de arquivos para a CEVA
+Cliente: De Santa
+Instrução SQL:
+Apelido: DESANTA
+Tolerância: 60
+
+Descrição: Recepção de notas do Bling
+Cliente: FontesLog
+Instrução SQL: 
+Apelido: WMSFONTESLOG
+Tolerância: 60
+
+Descrição: Extração de minutas do MELI
+Cliente: Murici
+Instrução SQL:
+Apelido: MURICI
+Tolerância: 60
+
+Descrição: Recepção de XMLs
+Cliente: Quality
+Instrução SQL:
+Apelido: QFASTPRINCIPAL
+Tolerância: 60
