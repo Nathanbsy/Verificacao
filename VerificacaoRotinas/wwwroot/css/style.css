@@ -1,0 +1,156 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Nunito";
+}
+
+.principal {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 16px 48px;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color: #0f172a;
+}
+
+.principal h1 {
+    font-size: 28px;
+    font-weight: 800;
+    margin: 8px 0 20px;
+    color: #0f172a;
+}
+
+.rotinas {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    margin: 16px 0 18px;
+}
+
+.card-rotina {
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    background: #ffffff;
+    padding: 14px 16px;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+}
+
+.card-rotina .card-title {
+    margin: 0 0 8px;
+    font-weight: 700;
+    color: #334155;
+}
+
+.card-rotina .card-text {
+    margin: 0;
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.card-rotina.total {
+    background: #f8fafc;
+}
+
+.card-rotina.ok {
+    border-color: rgba(1, 138, 49, 0.666);
+    background: #4bdb769e;
+}
+
+.card-rotina.alerta {
+    background: #ff150078;
+    border-color: #ff1500;
+}
+
+
+.tabela {
+    margin-top: 18px;
+}
+
+.rotinas-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #ffffff;
+    border: 1px solid #e2e8f0; 
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+}
+
+.rotinas-table thead tr {
+    background: #f8fafc; 
+}
+
+.rotinas-table th,
+.rotinas-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e2e8f0; 
+    font-size: 14px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.rotinas-table th {
+    font-weight: 700;
+    color: #334155;
+    white-space: nowrap;
+}
+
+.rotinas-table tbody tr {
+    transition: background-color 150ms ease;
+}
+
+.rotinas-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.rotinas-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+.cell-rotina {
+    font-weight: 700;
+    color: #1e293b; 
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid #e2e8f0;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.ok {
+    background-color: #4bdb769e;
+}
+
+.alerta {
+    background-color: #ff150078;
+}
+
+.badge--ok {
+    color: #01541e;
+    background: #f0fdf4;
+    border-color: #028a32;
+}
+
+.badge--alerta {
+    color: #000;
+    background: #ff150078;
+    border-color: #ff1500;
+    box-shadow: 2px 4px 4px rgba(15, 23, 42, 0.10);
+}
+
+
+.badge--erro {
+    color: #991b1b;
+    background: #fef2f2;
+    border-color: #fecaca;
+}

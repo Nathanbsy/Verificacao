@@ -2,32 +2,38 @@
     ViewData["Title"] = "Rotinas DDS";
 }
 
+@model List<Rotina>
+
 <div class="principal">
     <div>
         <h1 class="text-center mt-4">Verificação de Rotinas DDS</h1>
     </div>
+
     <div class="rotinas">
         <div class="card-rotina total">
             <div class="card-body">
                 <h5 class="card-title text-center">Total</h5>
-                <p class="card-text display-4">8</p>
+                <p class="card-text display-4">4</p>
             </div>
         </div>
+
         <div class="card-rotina ok">
             <div class="card-body">
                 <h5 class="card-title text-center">Ok</h5>
                 <p class="card-text display-4">4</p>
             </div>
         </div>
+
         <div class="card-rotina alerta">
             <div class="card-body">
                 <h5 class="card-title text-center">Alerta</h5>
-                <p class="card-text display-4">1</p>
+                <p class="card-text display-4">0</p>
             </div>
         </div>
     </div>
+
     <div class="tabela">
-        <table class="table table-striped">
+        <table class="rotinas-table">
             <thead>
                 <tr>
                     <th>Rotina</th>
@@ -37,26 +43,25 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>01/06/2024</td>
-                    <td>João Silva</td>
-                    <td><span class="badge bg-success">Ok</span></td>
-                </tr>
-                <tr>
-                    <td>02/06/2024</td>
-                    <td>Maria Oliveira</td>
-                    <td><span class="badge bg-warning text-dark">Alerta</span></td>
-                </tr>
-                <tr>
-                    <td>03/06/2024</td>
-                    <td>Carlos Souza</td>
-                    <td><span class="badge bg-success">Ok</span></td>
-                </tr>
-                <tr>
-                    <td>04/06/2024</td>
-                    <td>Ana Pereira</td>
-                    <td><span class="badge bg-danger">Pendente</span></td>
-                </tr>
+                @foreach (var item in Model)
+                {
+                    item.DataHora = DateTime.Now;
+
+                    double tempo = (DateTime.Now - item.DataHora).TotalMinutes;
+                    item.Status = tempo > item.Tolerancia ? "Alerta" : "Ok";
+
+                    var classeSpan = item.Status == "Alerta" ? "badge badge--alerta" : "badge badge--ok";
+                    var classeTr = item.Status == "Alerta" ? "alerta" : "ok";
+
+                    <tr class="@classeTr">
+                        <td class="cell-rotina">@item.Descricao</td>
+                        <td>@item.Cliente</td>
+                        <td>
+                            <span class="@classeSpan">@item.Status</span>
+                        </td>
+                        <td>@item.DataHora.ToString("dd/MM/yyyy HH:mm:ss")</td>
+                    </tr>
+                }
             </tbody>
         </table>
     </div>

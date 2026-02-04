@@ -7,16 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="Txt\rotinas.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MySql.Data" Version="9.6.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="wwwroot\assets\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="wwwroot\rotinas.txt" />
   </ItemGroup>
 
 </Project>
